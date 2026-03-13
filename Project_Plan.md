@@ -74,14 +74,15 @@ Our questions are directly answered by merging ACLED weekly conflict event data 
 | Data Merging/Integration | Aggregate ACLED to country-year, left join all three datasets on country_iso + year; add sipri_available and world_bankavailable flags and then save it as a cleaned_csv file | Mar. 27 | Pending |
 | Report our Project Status | Draft and submit the Status_Report.md with updated tasks or changes. Update the timeline and description of any challenges we have encountered. | March 31 | Pending |
 | Analysis & Visualizations | Creating visualizations for statistical comparison and analysis. | Apr 14 | Pending |
-| Snakemake workflow |  | Apr 21 | Pending |
-| Metadata and Documentation |  | Apr 25 | Pending |
-| Final Report |  | April 30 | Pending |
-| Final Submission |  | May 3 | Pending |
-
+| Snakemake workflow | Develop a pipeline for data acquisition, cleaning, data merging, and visualization so that the workflow can be reproduced automatically. | Apr 21 | Pending |
+| Metadata and Documentation | Write the metadata, documentation, README, and describe the datasets and workflow used in the project. | Apr 25 | Pending |
+| Final Report | Complete the paper with all steps, start to finish-introduction, research question, analysis, methods, and conclusion. | April 30 | Pending |
+| Final Submission | Submit everything to the GitHub repository and check with the rubric. | May 3 | Pending |
 
 ## Constraints
 
+It could be difficult to integrate these datasets in different formats, with information potentially collected at different times (weekly vs yearly), and it might not be easy to join by countries due to looking at different regions. These datasets, ACLED, SIPRI, and World Bank, all collect and organize data differently. We are unsure whether media or government limitations exist in the dataset that constrain the amount of data/information reported. During data downloading, we found that you have to sign into the website to get the data. ALCED has a policy on no redistribution of the raw data. Also there is nothing that explains alliance aids from different countries that contribute to those spending or not.
 
 ## Gaps
 
+The datasets might not all use the same method of naming countries and their codes/IDs, so some cleaning/preprocessing might be needed in order to join them together. We are unsure if there is any missing data involved. The events or circumstances that led to the difference in military spending will need to be found through a manual process such as analysis.
