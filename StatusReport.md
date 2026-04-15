@@ -59,18 +59,18 @@ For the World Bank data, each year is its own column, so we knew we would have t
 
 All three datasets are cleaned. All the code for this is in [`Cleaned_Merged.ipynb`](https://github.com/S1attaro/Fighting-Illini/blob/main/Cleaned%2BMerged.ipynb).
 
-**ACLED:** We filtered to just 2018 to 2024, which cut the dataset from about 118,000 rows down to about 95,000. We filled in the missing `POPULATION_EXPOSURE` values with 0 and the missing region labels with "Unknown." We also had to fix some country names to match the other datasets. For example ACLED says "Russia" but SIPRI says "Russian Federation," so we updated those. Then we grouped everything by country and year so each row is one country for one year, with totals for events, deaths, and each event type. This was saved as `acled_clean.csv`.
+**ACLED:** We filtered to just 2018 to 2024, which cut the dataset from about 118,000 rows down to about 95,000. We filled in the missing `POPULATION_EXPOSURE` values with 0 and the missing region labels with "Unknown." We also had to fix some country names to match the other datasets. For example ACLED says "Russia" but SIPRI says "Russian Federation," so we updated those. Then we grouped everything by country and year so each row is one country for one year, with totals for events, deaths, and each event type. This was saved as [`acled_clean.csv`](https://github.com/S1attaro/Fighting-Illini/blob/main/processed/acled_clean.csv).
 
-**SIPRI:** The header row in the Excel file is not at the top. There are a few rows of notes above the actual data. We wrote a function that finds where the real header is, reads the file from there, removes the regional rows, and reshapes it from wide to long format. We did this for both the constant USD sheet and the percent of GDP sheet and then merged them together. This was saved as `sipri_clean.csv`.
+**SIPRI:** The header row in the Excel file is not at the top. There are a few rows of notes above the actual data. We wrote a function that finds where the real header is, reads the file from there, removes the regional rows, and reshapes it from wide to long format. We did this for both the constant USD sheet and the percent of GDP sheet and then merged them together. This was saved as [`sipri_clean.csv`](https://github.com/S1attaro/Fighting-Illini/blob/main/processed/sipri_clean.csv).
 
-**World Bank:** We reshaped it from wide to long format, filtered to 2018 to 2024, and renamed the value column. Saved as `wb_clean.csv`.
+**World Bank:** We reshaped it from wide to long format, filtered to 2018 to 2024, and renamed the value column. Saved as [`worldbank_clean.csv`](https://github.com/S1attaro/Fighting-Illini/blob/main/processed/worldbank_clean.csv).
 
 ---
 
 ### 7. Data Merging / Integration
 **Status: Completed**
 
-After cleaning all three datasets we merged them into one file called `integrated_data.csv` inside the `processed` folder.
+After cleaning all three datasets we merged them into one file called [`integrated_data.csv`](https://github.com/S1attaro/Fighting-Illini/blob/main/processed/integrated_data.csv) inside the [`processed`](https://github.com/S1attaro/Fighting-Illini/tree/main/processed) folder.
 
 We used SIPRI as the base and joined the World Bank and ACLED data onto it using country and year. We added flags so we can see which country-years have data from all three sources. We made a combined `gdp_pct` column that uses the SIPRI percent of GDP value when it is available and falls back to the World Bank number when it is not.
 
