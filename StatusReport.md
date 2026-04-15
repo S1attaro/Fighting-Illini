@@ -63,7 +63,7 @@ For the World Bank data, each year is its own column, so we knew we would have t
 ### 6. Data Cleaning
 **Status: Completed**
 
-All three datasets are cleaned. All the code for this is in `Cleaned_Merged.ipynb`.
+All three datasets are cleaned. All the code for this is in [`Cleaned_Merged.ipynb`](https://github.com/S1attaro/Fighting-Illini/blob/main/Cleaned%2BMerged.ipynb).
 
 **ACLED:** We filtered to just 2018 to 2024, which cut the dataset from about 118,000 rows down to about 95,000. We filled in the missing `POPULATION_EXPOSURE` values with 0 and the missing region labels with "Unknown." We also had to fix some country names to match the other datasets. For example ACLED says "Russia" but SIPRI says "Russian Federation," so we updated those. Then we grouped everything by country and year so each row is one country for one year, with totals for events, deaths, and each event type. This was saved as `acled_clean.csv`.
 
