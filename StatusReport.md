@@ -138,16 +138,16 @@ The status report ended up being submitted later than the March 31 deadline most
 ## Challenges
 
 **SIPRI's Excel file was hard to read in**
-The data does not start on row 1 and region rows like "Eastern Europe" were mixed in with the country rows. We wrote a function that finds the real header row and removes the regional rows automatically.
+- The data does not start on row 1 and region rows like "Eastern Europe" were mixed in with the country rows. We wrote a function that finds the real header row and removes the regional rows automatically.
 
 **Country names did not match between datasets**
-ACLED, SIPRI, and the World Bank all write some country names differently. For example ACLED says "Russia" but SIPRI says "Russian Federation." We compared the country lists, found the mismatches, and fixed them with replacements in the cleaning step.
+- ACLED, SIPRI, and the World Bank all write some country names differently. For example ACLED says "Russia" but SIPRI says "Russian Federation." We compared the country lists, found the mismatches, and fixed them with replacements in the cleaning step.
 
 **Missing values in POPULATION_EXPOSURE**
-About 15,000 rows in ACLED were missing this value. We filled them with 0 so we could still aggregate the column, but we are not using it as a main variable in our analysis.
+- About 15,000 rows in ACLED were missing this value. We filled them with 0 so we could still aggregate the column, but we are not using it as a main variable in our analysis.
 
 **SIPRI uses strange codes for missing data**
-SIPRI writes `...` or `xxx` instead of leaving cells blank. We replaced all of those with NaN before converting the columns to numbers.
+- SIPRI writes `...` or `xxx` instead of leaving cells blank. We replaced all of those with NaN before converting the columns to numbers.
 
 ---
 
