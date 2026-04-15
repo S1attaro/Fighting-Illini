@@ -7,12 +7,6 @@
 
 ---
 
-## Project Overview
-
-Our project is looking at whether military spending and armed conflict are connected across Europe and Central Asia from 2018 to 2024. We are using three datasets: ACLED for conflict event data, SIPRI for military spending numbers, and the World Bank for military spending as a percent of GDP. We are combining all three to see if countries that spend more on their military also have more conflicts, more deaths, or different kinds of conflict events. The three main areas we are focusing on are the Russia-Ukraine War, the Nagorno-Karabakh conflict between Armenia and Azerbaijan in 2020, and the Central Asia region.
-
----
-
 ## Task Updates
 
 ### 1. Team Setup
@@ -107,20 +101,6 @@ The README and metadata files have not been written yet. We are planning to fini
 
 ---
 
-### 11. Final Report
-**Status: Not Started**
-
-Planned for April 30.
-
----
-
-### 12. Final Submission
-**Status: Not Started**
-
-Planned for May 3.
-
----
-
 ## Updated Timeline
 
 | Task | Original Due Date | Status | Updated Due Date |
@@ -158,20 +138,16 @@ The status report ended up being submitted later than the March 31 deadline most
 ## Challenges
 
 **SIPRI's Excel file was hard to read in**
-
-When we first tried to load the SIPRI file it came out broken. The actual data does not start on row 1 because there are notes at the top, and rows for whole regions like "Eastern Europe" were mixed in with the country rows. We fixed it by writing a function that automatically finds the real header row and removes the regional rows before doing anything else.
+The data does not start on row 1 and region rows like "Eastern Europe" were mixed in with the country rows. We wrote a function that finds the real header row and removes the regional rows automatically.
 
 **Country names did not match between datasets**
+ACLED, SIPRI, and the World Bank all write some country names differently. For example ACLED says "Russia" but SIPRI says "Russian Federation." We compared the country lists, found the mismatches, and fixed them with replacements in the cleaning step.
 
-ACLED, SIPRI, and the World Bank all write some country names differently. ACLED says "Russia" but SIPRI says "Russian Federation" for example. When we merged on country name those rows would not line up. We compared the country lists from each dataset, found the ones that did not match, and fixed them with a few replacements in the cleaning step.
-
-**A lot of missing values in POPULATION_EXPOSURE**
-
-About 15,000 rows in ACLED were missing the `POPULATION_EXPOSURE` value. We think these are regions where ACLED just did not have an estimate rather than actual zero-exposure areas. We filled them with 0 so we could still aggregate the column, but we are not using it as a main variable in our analysis.
+**Missing values in POPULATION_EXPOSURE**
+About 15,000 rows in ACLED were missing this value. We filled them with 0 so we could still aggregate the column, but we are not using it as a main variable in our analysis.
 
 **SIPRI uses strange codes for missing data**
-
-SIPRI writes `...` or `xxx` in cells where data is missing or not reported. Pandas does not treat those as missing automatically so they were being read as text and breaking the numeric columns. We replaced all of those codes with NaN first and then converted the columns to numbers.
+SIPRI writes `...` or `xxx` instead of leaving cells blank. We replaced all of those with NaN before converting the columns to numbers.
 
 ---
 
