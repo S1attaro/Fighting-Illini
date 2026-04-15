@@ -137,7 +137,7 @@ The status report ended up being submitted later than the March 31 deadline most
 
 ## Challenges
 
-**SIPRI's Excel file was hard to read in**
+**SIPRI's Excel file was hard to read**
 - The data does not start on row 1 and region rows like "Eastern Europe" were mixed in with the country rows. We wrote a function that finds the real header row and removes the regional rows automatically.
 
 **Country names did not match between datasets**
