@@ -80,10 +80,15 @@ To double check the output we looked at Ukraine's numbers. Military spending goe
 
 ---
 
-### 8. Analysis & Visualizations
-**Status: In Progress**
+### 8. Visualization Plan 
 
-We have not finished any visualizations yet but we are working on them. We are planning to make time-series charts of military spending vs conflict events by country, a map of conflict intensity using the coordinates in ACLED, event type breakdowns for the main conflict zones, and a comparison of countries above and below the NATO 2% threshold. We want to have these done by April 21.
+I will be responsible for designing and implementing the visualizations for this project. These visualizations are intended to clearly show the relationship between conflict intensity and military spending across countries and over time.
+
+I will be creating visualizations such as Time-Series Comparison (Conflict vs Spending) for Line charts showing military spending (USD) and total conflict events over time (2018–2024) for key countries to Highlight how conflict spikes relate to changes in military spending. Scatter Plot (Spending vs Conflict Intensity) with each point represents a country-year(X-axis: military spending (USD or % GDP), Y-axis: total conflict events or fatalities), in order to Show overall correlation between spending and conflict intensity. A Bar chart comparing average conflict events for countries above vs below the 2% GDP military spending threshold. So we can evaluate whether higher spending correlates with higher or lower conflict intensity. If furthur needed and possible I will create stacked bar charts showing event types (Protests, Battles, Explosions, etc.) across different conflict zones, to Compare the nature of conflict across regions. And Geospatial Map of Conflict Events, to provide spatial understanding of conflict hotspots.
+
+These visualizations will be implemented using Python libraries such as `matplotlib`, `seaborn`, and `geopandas`. 
+
+Currently busy with catch ups so I will aim to get it done by April 21.
 
 ---
 
@@ -133,6 +138,8 @@ We also ran into four country name mismatches between ACLED and the other datase
 
 The status report ended up being submitted later than the March 31 deadline mostly because the SIPRI cleaning took longer. Because of that the visualization and Snakemake tasks got pushed back about a week.
 
+With life events and workload piling up it might take a little longer than expected to finish our milestones, but hopefully we can get everything done with this pushed timeline.
+
 ---
 
 ## Challenges
@@ -159,7 +166,9 @@ For this milestone I did all of the data work in `Cleaned_Merged.ipynb`. That in
 
 ### Jessica Zheng
 
-*(Jessica will add and commit her own contribution summary directly to this file in the shared GitHub repo.)*
+For this milestone, I focused on planning the visualization component of the project. I will design a set of visualizations that will illustrate the relationship between conflict intensity and military spending across countries and over time. This includes time-series comparisons, correlation scatter plots, NATO threshold analysis, conflict-type breakdowns, and geospatial mapping of conflict events.
+
+I also reviewed the integrated dataset to understand its structure and ensure it supports the planned visualizations. I will be responsible for implementing all visualizations in Python and organizing the output files in the repository. The visualization scripts and figures will be committed by April 21st.
 
 ---
 
