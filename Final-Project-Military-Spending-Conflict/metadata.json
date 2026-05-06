@@ -1,0 +1,62 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "Dataset",
+  "name": "Military Spending and Conflict Intensity in Europe and Central Asia, 2018-2024",
+  "description": "An integrated dataset combining SIPRI military expenditure data, World Bank military spending indicators, and ACLED conflict event data to analyze the relationship between military spending and conflict intensity across Europe and Central Asia from 2018 to 2024.",
+  "url": "https://github.com/S1attaro/Fighting-Illini",
+  "creator": [
+    {
+      "@type": "Person",
+      "name": "Connor Slattery"
+    },
+    {
+      "@type": "Person",
+      "name": "Jessica Zheng"
+    }
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "temporalCoverage": "2018/2024",
+  "spatialCoverage": "Europe and Central Asia",
+  "keywords": [
+    "military spending",
+    "conflict",
+    "Europe",
+    "Central Asia",
+    "SIPRI",
+    "ACLED",
+    "World Bank",
+    "data integration",
+    "regression analysis",
+    "clustering"
+  ],
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv",
+      "contentUrl": "https://github.com/S1attaro/Fighting-Illini/blob/main/processed/integrated_data.csv"
+    }
+  ],
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "GitHub"
+  },
+  "isBasedOn": [
+    {
+      "@type": "Dataset",
+      "name": "SIPRI Military Expenditure Database",
+      "url": "https://milex.sipri.org/sipri"
+    },
+    {
+      "@type": "Dataset",
+      "name": "World Bank Military Expenditure (% of GDP)",
+      "url": "https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS"
+    },
+    {
+      "@type": "Dataset",
+      "name": "ACLED Aggregated Data - Europe and Central Asia",
+      "url": "https://acleddata.com/aggregated/aggregated-data-europe-and-central-asia"
+    }
+  ],
+  "datePublished": "2026-05-06",
+  "inLanguage": "en"
+}
