@@ -27,6 +27,8 @@ I wrote all the modeling code:
 
 Wrote `data_dictionary.md` covering all four output files and 21 variables, `metadata.json`, `requirements.txt`, `run_all.py`, `check_integrity.py`, `checksums.md`, and `LICENSE`. Also wrote the majority of the status report.
 
+
+
 ## Jessica Zheng
 
 For the final project I focused mainly on creating visualizations, helping interpret results, and supporting the analysis and write-up.
@@ -64,42 +66,3 @@ I contributed to writing and editing parts of the final report, especially the s
 
 Overall, my contribution focused on turning the analysis into clear, interpretable visuals and helping connect those visuals back to the statistical results. I made sure the figures were readable, consistent, and useful for explaining the main findings of the project.
 
-## Jessica Zheng
-
-For the final project I was responsible for creating all visualizations, contributing to parts of the analysis, and writing the majority of the README/report.
-
-### Visualizations
-
-I created all of the project’s visualizations using the cleaned and integrated dataset. My focus was on turning the analysis outputs into clear and interpretable figures that directly support the research questions and findings.
-
-- Correlation matrix heatmap showing relationships between key variables such as military spending, GDP share, conflict events, and fatalities  
-- Event type breakdown plots showing differences in conflict event categories across countries and regions  
-- Multi-country time series plots showing how conflict intensity changes over time  
-- Ukraine-focused time series plot highlighting the sharp post-2022 increases in conflict events, fatalities, and military spending  
-- Conflict intensity heatmaps showing variation across countries and years  
-- Structural break visualizations comparing pre-2022 and post-2022 trends  
-
-For all figures, I refined formatting and presentation to improve readability, including adjusting labels, fixing scaling issues (especially for extreme values like Ukraine), and improving overall consistency across plots.
-
-### Analysis Support
-
-I contributed to parts of the analysis by helping interpret outputs and supporting the connection between results and visualizations. While I did not implement the regression models or K-Means clustering, I helped review outputs and ensured that key patterns were correctly reflected in the figures and written explanations.
-
-This included helping validate that trends observed in the data matched the statistical outputs, and making sure the interpretation of results (especially the post-2022 structural changes) was consistent across all sections.
-
-### Documentation (README / Report)
-
-I wrote the majority of the final README/report, including structuring the document, writing the narrative sections, and connecting the data, analysis, and visualizations into a coherent story.
-
-This included:
-- Organizing the overall report structure (summary, data profile, methods, findings, etc.)  
-- Writing and refining explanations of datasets and preprocessing steps  
-- Describing key findings and linking them to visual and statistical results  
-- Ensuring consistency in tone, formatting, and terminology across sections  
-- Editing and polishing content to improve clarity and readability  
-
-I also helped ensure that the report clearly explained the workflow from raw data to final results, so that the project is reproducible and easy to follow.
-
-### Overall Contribution
-
-Overall, my main contributions were creating all project visualizations and writing the majority of the README/report. I also supported analysis interpretation and helped ensure that results were clearly communicated and consistently presented across the full project.
