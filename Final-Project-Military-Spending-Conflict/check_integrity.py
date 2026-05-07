@@ -1,6 +1,9 @@
 import hashlib
 from pathlib import Path
 
+data_dir = Path(__file__).parent / "data"
+print(f"Looking in: {data_dir.resolve()}")
+
 files = [
     "SIPRI-Milex-data-2017-2025.xlsx",
     "API_MS.MIL.XPND.GD.ZS_DS2_en_csv_v2_211.csv",
@@ -8,7 +11,7 @@ files = [
 ]
 
 for filename in files:
-    path = Path(filename)
+    path = data_dir / filename
     if path.exists():
         sha256 = hashlib.sha256(path.read_bytes()).hexdigest()
         print(f"{filename}")
