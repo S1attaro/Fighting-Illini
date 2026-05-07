@@ -6,9 +6,9 @@ For the final project I handled all data gathering, cleaning, integration, analy
 
 I loaded all three raw datasets and built a cleaning process for each:
 
-- **ACLED** — filtered to 2018-2024, dealt with missing values in `POPULATION_EXPOSURE` and `ADMIN1`, standardized country names across sources, and combined weekly event records into yearly totals per country with event types split into their own columns
-- **SIPRI** — wrote a custom parser to handle the multi-sheet Excel layout, automatically find the header row, convert from wide to long format, drop summary rows for whole regions, and replace special missing value codes with `NaN`
-- **World Bank** — reformatted and filtered down to the Europe and Central Asia country list
+- **ACLED** filtered to 2018-2024, dealt with missing values in `POPULATION_EXPOSURE` and `ADMIN1`, standardized country names across sources, and combined weekly event records into yearly totals per country with event types split into their own columns
+- **SIPRI** wrote a custom parser to handle the multi-sheet Excel layout, automatically find the header row, convert from wide to long format, drop summary rows for whole regions, and replace special missing value codes with `NaN`
+- **World Bank** reformatted and filtered down to the Europe and Central Asia country list
 
 From there I merged all three into `integrated_data.csv` on a shared country and year key, manually adding USA and Canada to the country list where they were missing. I also added new columns for `gdp_pct`, `nato_2pct_threshold`, and `conflict_zone`, and checked the results against known values for countries like Ukraine.
 
